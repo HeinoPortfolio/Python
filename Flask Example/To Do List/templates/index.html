@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+<html>
+    
+    <head>
+        {% if title %}
+        <title>{{title}} - To Do List</title>
+        {% else%}
+        <title>{{title}} - To Do List</title>
+        {% endif %}
+    </head>
+    <body  bgcolor="#E6E6FA">
+    <div>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                {{message}}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <hr>
+    <br>
+    <br>
+    </div>
+    <center>
+        <form action={{ url_for('delete_item') }} method="post">
+        <table bgcolor="White" style="width: 40%;" border="3" cellpadding="13">
+            <thead><th>Description</th><th>Email</th><th>Priority</th><th>Delete Item</th></thead>
+            <tbody>
+                {% for todolst in todolist %}
+                <tr><td>{{todolst.todo}}</td><td>{{todolst.email}}</td><td>{{todolst.priority}}</td>
+                <td><button name="todo" type="submit" value="{{todolst.todo}}">Delete</button></td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </form>
+    </center>
+        <hr>
+    <center>
+        <form action={{ url_for('submit') }} method="post">
+            <label> To do task:</label><br> 
+            <input type="text" name="task"><br>
+            <div>
+                <label> Email: </label><br>
+                <input type="text" name="email"><br> <br>
+            
+            </div>
+            <div><label> Priority</label>
+                <select id="PrioritySel" name="priority">
+                     <option value="High">High</option>
+                     <option value="Medium">Medium</option>
+                     <option value="Low">Low</option>
+                </select> 
+            </div>
+            <p><input type = "submit" value = "Add To Do Item" /></p>
+        </form>
+        <form action={{ url_for('clear') }} method="post">
+            <label> Clear the list:</label> 
+            <input type = "submit" value= "CLEAR" />
+        </form>
+        <hr>
+        <form action={{ url_for('save') }} method="post">
+            <label> Save the list:</label> 
+            <input type = "submit" value= "SAVE" />
+        </form>
+       </center> 
+    
+        
+
+    </body>
+</html> 
+
