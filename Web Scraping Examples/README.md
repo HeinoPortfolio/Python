@@ -7,3 +7,4 @@
   **Concept or Technology Used**|**Description**
 :-----:|:-----:
 Jupyter Notebook| An interactive way to show Python code
+Beautiful Soup| A way to extract HTML information
