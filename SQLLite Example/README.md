@@ -4,6 +4,6 @@ This is a simple project that illustrates how to set up a database in SQLite. It
  
  **Concept or Technology Used**|**Description**
 :-----:|:-----:
-SQLite| A Compact database
+SQLite| A compact database
 
 To run this these scripts you will need to run load_pet.py first and than run the quiery_pets.py.  The latter is a simple script that will ask for an ID to see what pets the person may own.  Valid IDs for this are: 1 - 4.  Any other value will give an error message.
