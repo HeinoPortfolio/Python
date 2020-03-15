@@ -17,6 +17,6 @@ This README file shows the general structure of the PYTHON Folder.  Within each 
 * A few example of web scraping via Python.
 4. ### Flask -
 * A simple To DO List using Flask
-5. ### Comming Soon - 
+5. ### Coming Soon - 
 6. ### Projects -
  * Simple Projects that utilize some of the above concepts.
