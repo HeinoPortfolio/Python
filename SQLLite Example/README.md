@@ -6,7 +6,7 @@ This is a simple project that illustrates how to set up a database in SQLite. It
 :-----:|:-----:
 SQLite| A compact database
 
-To run this these scripts you will need to run them in the following order: 
+To run this these scripts you will need to run them in this order:
 1. load_pet.py 
 2. query_pets.py.  
 
