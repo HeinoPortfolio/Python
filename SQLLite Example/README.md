@@ -1,6 +1,6 @@
 # SQLite Example
 
-This is a simple project that illustrates how to set up a database in SQLite. It was taken from a homework assignment for a beginning tutorial on SQLLite and Python.  It will set up a database that contains some inforamtion about pets and their users.  It create a table to associate the data about pets and the data about the owner's of the pets. 
+This is a simple project that illustrates how to set up a database in SQLite. It was taken from a homework assignment for a beginning tutorial on SQLite and Python.  It will set up a database that contains some inforamtion about pets and their users.  It create a table to associate the data about pets and the data about the owner's of the pets. 
  
  **Concept or Technology Used**|**Description**
 :-----:|:-----:
