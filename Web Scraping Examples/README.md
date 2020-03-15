@@ -1,6 +1,6 @@
 
 # Web Scraping Example 
-<p> In this folder you will find some simple examples on how to scrape data from a website.  In the examples in this folder one will scrape stock data from Yahoo Finance page and it will return the closing price for Apple.  It will list the last 100 closings of the stock.  In the next example I will ouput the number of touchdowns for the season.
+<p> In this folder you will find some simple examples on how to scrape data from a website.  In the examples in this folder one will scrape stock data from Yahoo Finance page and it will return the closing price for Apple.  It will list the last 100 closings of the stock.  In the next example I will ouput the number of touchdowns for the 2018 season. It will be listed from highest to lowest.
   The technology  and concepts is given in the table below:
   </p>
   
@@ -11,4 +11,4 @@ Beautiful Soup| A way to extract HTML information
 
 ## Jupyter Notebooks
 1. Apple Web Scrape
-2. 
+2. Touchdown Stats
