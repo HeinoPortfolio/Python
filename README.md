@@ -11,8 +11,10 @@ This README file shows the general structure of the PYTHON Folder.  Within each 
  * Basic items of the language like control structures.
 2. ### Python Classes -
  *  Shows some basic classes it will have some driver files to test them.
-3. ### Simple Python graphics
-4. ### Python GUI-
+3. ### SQLite Example -
+* An example how how to use Python to create and use a SQLite Database.
+4. ### Web Scraping-
+* A few example of web scraping via Python.
 4. ### Places -
 5. ### Place - 
 6. ### Projects -
