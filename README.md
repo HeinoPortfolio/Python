@@ -17,6 +17,7 @@ This README file shows the general structure of the PYTHON Folder.  Within each 
 * A few example of web scraping via Python.
 5. ### Flask -
 * A simple To DO List using Flask
-6. ### Pandas Examples - Examples of Pandas and other libraries that can be used to visualize and analyze data.  For example numpy and Seaborn.
+6. ### Pandas Examples - 
+* Examples of Pandas and other libraries that can be used to visualize and analyze data.  For example numpy and Seaborn.
 7. ### Projects -
  * Simple Projects that utilize some of the above concepts.
