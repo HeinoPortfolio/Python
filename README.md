@@ -15,8 +15,8 @@ This README file shows the general structure of the PYTHON Folder.  Within each 
 * An example how how to use Python to create and use a SQLite Database.
 4. ### Web Scraping-
 * A few example of web scraping via Python.
-4. ### Flask -
+5. ### Flask -
 * A simple To DO List using Flask
-5. ### Coming Soon - 
-6. ### Projects -
+6. ### Pandas Examples - Examples of Pandas and other libraries that can be used to visualize and analyze data.  For example numpy and Seaborn.
+7. ### Projects -
  * Simple Projects that utilize some of the above concepts.
