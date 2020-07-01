@@ -21,3 +21,5 @@ This README file shows the general structure of the PYTHON Folder.  Within each 
 * Examples of Pandas and other libraries that can be used to visualize and analyze data.  For example numpy and Seaborn.
 7. ### Projects -
  * Simple Projects that utilize some of the above concepts.
+8. ### Titanic Project
+* Titanic Project that utilized various concepts learned in a data analysis class.
