@@ -1,5 +1,5 @@
 # IS211_FinalProject
-Dear Professor Ledon,
+To the Reader,
 
 The command to run the program is:          python app.py.
 
