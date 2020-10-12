@@ -23,3 +23,5 @@ This README file shows the general structure of the PYTHON Folder.  Within each 
  * Simple Projects that utilize some of the above concepts.
 8. ### Titanic Project
 * Titanic Project that utilized various concepts learned in a data analysis class.
+9. ### Final Project Flask Example
+* A simple School Application that uses Flask and other technologies.
