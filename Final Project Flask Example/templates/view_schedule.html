@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<head>
+    <title> Register for classes</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/schedule.css')}}">
+</head>
+</head>
+
+<body>
+<p>Your schedule is viewed below.  Click on Drop Class to drop a class from your scedule.</p>
+    <center>
+        <form action={{ url_for('view_schedule') }} method="post">
+        <table id="schedule">
+            <thead>
+                <th>Registration ID</th>
+                <th>Course ID</th>
+                <th>Department</th>
+                <th>Course Number</th>
+                <th>Course Title</th>
+                <th>Delete Class</th>
+            </thead>
+            <tbody>
+                {% for class in classes %}
+                <tr>
+                    <td>{{class.id}}</td>
+                    <td>{{class.course_id}}</td>
+                    <td>{{class.dept}}</td>
+                    <td>{{class.courseNum}}</td>
+                    <td>{{class.courseTitle}}</td>
+                <td><button name="delete_class" type="submit" value="{{class.id}}">Drop Class</button></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button name="delete_all_classes" type="submit" value=True>Drop All Classes</button>
+        </form>
+    </center>
+</body>
+{% endblock %}

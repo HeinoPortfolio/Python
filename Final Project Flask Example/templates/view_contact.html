@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <title> Contact Information Page </title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/viewcontact.css')}}">
+</head>
+    <p>
+        Logged in as: &nbsp {{loginname}}
+    </ul>
+    </p>
+    <div>
+        <ul>
+           <li> Name: &nbsp {{name}} </li>
+           <li> Address: &nbsp {{address}} </li>
+           <li> City: &nbsp {{city}} </li>
+           <li> State: &nbsp {{state}} </li>
+           <li>Phone: &nbsp {{phone}} </li>
+        </ul>
+    <div>
+    
+    <hr>
+    <center>
+        <div>
+            <form action={{url_for('view_contact')}} method="POST">  
+                <fieldset>
+                    <legend> Update Contact Information </legend>    
+                        {{ form.hidden_tag() }}     
+                        {{form.address.label}} 
+                        {{form.address}}
+                        <br>
+                        {{form.city.label}}
+                        {{form.city}}
+                        <br>
+                        {{form.state.label}}
+                        {{form.state}}
+                        <br>
+                        {{form.phone.label}}
+                        {{form.phone}}
+                        <br>
+                        {{form.submit(class_="loginbtn")}}
+                </fieldset>
+            </form>
+        </div>
+    </center>  
+    
+{% endblock %}

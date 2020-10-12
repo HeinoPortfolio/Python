@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+<title> Register for Courses</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/schedule.css')}}">
+</head>
+
+<body>
+<p>Your schedule is viewed below.  Click on Register for Class to register for a class from your scedule.</p>
+    <center>
+        <form action={{ url_for('register_classes') }} method="post">
+        <p>
+            <label>Search for course by department</label>
+            <select name="department">
+                {% for dept in departments%}
+                    <option value="{{dept}}">{{dept}}</option>          
+                {% endfor %}
+            </select>
+            <button name="search_classes" type="submit" value="Search">Search for classes</button>
+        </p>
+        <table id="schedule">
+            <thead>
+                <th>Registration ID</th>
+                <th>Course ID</th>
+                <th>Department</th>
+                <th>Course Number</th>
+                <th>Course Title</th>
+                <th>Register for Class</th>
+            </thead>
+            <tbody>
+                {% for class in classes %}
+                <tr>
+                    <td>{{class.id}}</td>
+                    <td>{{class.course_id}}</td>
+                    <td>{{class.dept}}</td>
+                    <td>{{class.courseNum}}</td>
+                    <td>{{class.courseTitle}}</td>
+                <td><button name="Register_class" type="submit" value="{{class.course_id}}">Add Class</button></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        </form>
+       
+    </center>
+</body>
+{% endblock %}
