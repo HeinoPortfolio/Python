@@ -24,4 +24,4 @@ These technologies were used to solve the problem of creating the application.  
 
 These tables gave the application some reasonable funtionality.  There is room for some improvement for the tables.  But the tables as they are could show the potential of the application of the program.  If had more time on the program.  The reason for storint certain things like course infrormation in a separate table is that this information does not need to be stored more than once.  The most dynamic tables will be the Registered_courses and contact information.  These tables will under go the most edits so it seemed best to store only the bare minimum of information and use a join to get the rest of it from the Course_Info table.
 
-While there are a few shortcoming with this program.  It does make use of a lot of the concepts that were covered in class during the semester. 
+ 
