@@ -1,4 +1,4 @@
-# IS211_FinalProject
+# Simple School Schedule Application
 To the Reader,
 
 The command to run the program is:          python app.py.
