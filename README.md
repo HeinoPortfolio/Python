@@ -1,4 +1,4 @@
-# Python Repo
+# Python Repository
 
 <p>
 This README file shows the general structure of the PYTHON Folder.  Within each of the subfolders there will be a separate README with additional information about what is contained there as well as possible other information about the files. For example,  there may be a table that shows the concepts or technology used in the file or project.  
