@@ -1,4 +1,5 @@
-# IS211_Assignment5
+# Server Simulation
+
 Commands to run the program:
 
 For one server:
