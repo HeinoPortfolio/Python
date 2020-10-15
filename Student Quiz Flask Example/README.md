@@ -1,6 +1,4 @@
-# IS211_Assignment13
-
-Dear Professor Ledon,
+# Student Quiz Flask Example
 
 The command to run the app is the following:
 
