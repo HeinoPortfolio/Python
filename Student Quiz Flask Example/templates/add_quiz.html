@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <title>Student Information</title>
+   <div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <hr>
+        <br>
+        <br>
+   </div>
+   <body bgcolor="#E6E6FA"> 
+   <legend>  Enter Quiz Information </legend>
+       <fieldset>
+       <form action ="{{url_for('add_quiz')}}" method="POST">
+           <label> Enter Quiz Subject </label>
+           <input type= "text" name="subject" /> <br>
+            <label> Enter Number of Questions: </label>
+            <input type= "text" name="questions" /> <br> 
+            <div>
+                <label> Select Month: </label>
+                <select name="month">
+                {% for month in months%}
+                    <option value="{{month}}">{{month}}</option>          
+                {% endfor %}
+                </select>
+                <label> Enter Day </label>
+                   <input type= "text" name="day" />
+                <label> Enter Year: </label>
+                    <input type= "text" name="year" /> 
+            </div> 
+            <input type="submit" value="Submit"></input>
+            </form>
+       </fieldset>    
+       <div>
+        <a href="{{url_for('dashboard')}}""> Return to Dashboard</a>
+    </div> 
+   </body>
+</html>

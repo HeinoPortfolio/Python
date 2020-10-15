@@ -1,0 +1,72 @@
+<html>
+    
+    <head>
+        {% if title %}
+        <title>{{title}} </title>
+        {% else%}
+        <title>Student View</title>
+        {% endif %}
+    </head>
+    <body bgcolor="#E6E6FA">
+    <div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <hr>
+        <br>
+        <br>
+    </div>
+    <center>
+        <fieldset>
+            <legend><h2>Select Quiz</h2></legend>
+            <form action={{ url_for('view_anon', id=0)}} method="post">
+                    <table name="quiz" bgcolor="White" style="width: 100%;" border="3" cellpadding="13">
+                        <thead>
+                            <th>Quiz ID</th>
+                            <th>Subject</th>
+                            <th>Date</th>
+                            <th>View Grade</th>
+                        </thead>
+                            {% for quiz in quizzes %}
+                            <tr>
+                                <td>{{quiz["quiz_id"]}} </td>
+                                <td>{{quiz["subject"]}} </td>
+                                <td>{{quiz["date_of_quiz"]}} </td>
+                                <td> <a href="{{url_for('view_anon', id=quiz['quiz_id'])}}"> View Student Grades</a>
+                                </td>
+                            </tr>       
+                           {% endfor %}
+                    </table>
+            </form>
+        </fieldset>
+    </center>
+    <hr>
+        <legend>Results of Selected Quiz <legend>
+            <table name="quiz" bgcolor="White" style="width: 100%;" border="3" cellpadding="13">
+                <thead>
+                    <th>Student ID</th>
+                    <th>grade</th>
+                </thead>
+                    {% for score in scores %}
+                    <tr>
+                        <td>{{score["stu_id"]}} </td>
+                        <td>{{score["score"]}} </td>
+                    </tr>       
+                    {% endfor %}
+            </table>
+        <br>
+        <br>
+         <a href="{{url_for('logout')}}">Logout</a>
+         <br>
+        <a href="{{url_for('index')}}""> Click Here To Login</a>
+        <br>
+        <a href="{{url_for('dashboard')}}">  Click Here to Return to Dashboard</a>
+    </body>
+</html>
+
+
+

@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html>
+    
+    <head>
+        {% if title %}
+        <title>{{title}} </title>
+        {% else%}
+        <title>Login</title>
+        {% endif %}
+    </head>
+    <body bgcolor="#E6E6FA">
+    <div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <hr>
+        <br>
+        <br>
+    </div>
+    <center>
+        <fieldset><legend><h2>Log In</h2></legend>
+            <form action={{ url_for('login') }} method="post">
+            <div>
+                <label> Username </label>
+                <input type=text name=username value='admin' required>
+            </div>
+            <br>
+            <div>
+                <label> Password </label>
+                <input type=text name=password value='password' required>
+           
+            </div>
+             <br>
+                <input type=submit value=Login>       
+            </form>
+        <fieldset>
+    </center>
+    <hr>
+    <p>  To login in anonymously enter Guest and enter anon.
+    </p>
+    </body>
+</html>
+

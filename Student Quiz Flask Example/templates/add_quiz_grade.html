@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html> 
+    <head>  
+        <title>View Grades</title>
+    </head>
+    <body bgcolor="#E6E6FA">
+    <div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <hr>
+        <br>
+        <br>
+    </div>
+    <div>
+        <caption> Add Student Grades </caption>
+        <fieldset>
+        <br>
+            <form action ="{{url_for('add_quiz_grade')}}" method="POST">
+                <label> Select Student:</label>
+                    <select name="student_select">
+                        {% for student in students%}
+                            <option value="{{student['stud_id']}}"> 
+                                {{student["first_name"]}} {{student["last_name"]}}
+                            </option>
+                        {% endfor %}
+                    </select>
+                <br>
+                <label>Select Quiz</label>
+                    <select name="quiz_select">
+                        {% for quiz in quizzes%}
+                            <option value="{{quiz['quiz_id']}}"> 
+                                {{quiz["subject"]}}
+                            </option>
+                        {% endfor %}
+                    </select>
+                    <br>
+                 <label> Enter Grade </label>
+                   <input type= "text" name="grade" />
+                 <br>
+                  <input type="submit" value="Add Grade"></input>
+            </form>
+            <br>
+        </fieldset>
+    </div>
+    <br>
+    <div>
+        <a href="{{url_for('dashboard')}}""> Return to Dashboard</a>
+    </div>
+    </body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+   <title>Student Information</title>
+   <div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <hr>
+        <br>
+        <br>
+   </div>
+   <body bgcolor="#E6E6FA"> 
+   <legend>  Enter Student Information </legend>
+       <fieldset>
+       <form action ="{{url_for('add_student')}}" method="POST">
+           <label> Enter First Name: </label>
+           <input type= "text" name="first_name" /> <br>
+            <label> Enter Last Name: </label>
+            <input type= "text" name="last_name" /> <br>
+            <input type="submit" value="submit"></input>
+        </form>
+       </fieldset>
+       <div>
+        <a href="{{url_for('dashboard')}}""> Return to Dashboard</a>
+    </div>     
+   </body>
+</html>

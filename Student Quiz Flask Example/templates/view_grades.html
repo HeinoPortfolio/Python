@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html> 
+    <head>  
+        <title>View Grades</title>
+    </head>
+    <body bgcolor="#E6E6FA">
+    <div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <hr>
+        <br>
+        <br>
+    </div>
+    <div>
+    <caption> Student Grades </caption>
+            <table bgcolor="White" style="width: 100%;" border="3" cellpadding="13">
+                <thead>
+                    <th>Quiz ID</th>
+                    <th>Subject</th>
+                    <th>Quiz Grade</th>
+                    <th>Date</th>
+                </thead>
+                      {% for grade in grades%}
+                    <tr>
+                        <td>{{grade["ID"]}}</td>
+                        <td>{{grade["Subject"]}}</td>
+                        <td>{{grade["Score"]}}</td>
+                        <td>{{grade["Date"]}}</td>
+                    </tr>
+                   {% endfor %}        
+            </table>
+    </div>
+    <div>
+        <a href="{{url_for('dashboard')}}""> Return to Dashboard</a>
+    </div>
+    </body>
+</html>

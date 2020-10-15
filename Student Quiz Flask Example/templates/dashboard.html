@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        {% if title %}
+        <title>{{title}} </title>
+        {% else%}
+        <title>Welcome</title>
+        {% endif %}
+    </head>
+    <body bgcolor="#E6E6FA">
+    <div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <hr>
+        <br>
+        <br>
+    </div>
+   
+    <br>
+    <div>
+        <div style="float:left">
+            <caption> Student Roster </caption>
+            <table bgcolor="White" style="width: 100%;" border="3" cellpadding="13">
+                <thead>
+                    <th>Student ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>View Grades </th>
+                </thead>
+                      {% for row in rows%}
+                    <tr>
+                        <td>{{row["stud_id"]}}</td>
+                        <td>{{row["first_name"]}}</td>
+                        <td>{{row["last_name"]}}</td>
+                        <td>
+                            <a href="{{url_for('view_quizzes', id=row['stud_id'])}}"> View Student Grades</a>
+                        </td>
+                    </tr>
+                   {% endfor %}
+                      
+            </table>
+       </div>
+        <div style="margin-left: 10px" >
+            <caption>  Quiz Information <caption>
+            <table bgcolor="White" style="width: 50% " border="3" cellpadding="13">
+                <thead>
+                    <th>Quiz ID</th>
+                    <th>Subject</th>
+                    <th>Number of Questions</th>
+                    <th>Date of Quiz</th>
+                </thead>
+                <tbody>
+                    {% for quiz in quizzes%}
+                    <tr>
+                        <td>{{quiz["quiz_id"]}}</td>
+                        <td>{{quiz["subject"]}}</td>
+                        <td>{{quiz["number_of_questions"]}}</td>
+                        <td>{{quiz["date_of_quiz"]}}</td>
+                    </tr>
+                   {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</body> 
+<br>
+<br><br><br><br>
+<fieldset><legend>Actions that can be performed </legend>
+        <a href="{{url_for('add_student')}}""> Add student to the class</a>
+        <br>
+        <a href="{{url_for('add_quiz')}}""> Add Quiz</a>
+        <br>
+        <a href="{{url_for('add_quiz_grade')}}""> Add Student Quiz Grade</a>
+        <br>
+         <a href="{{url_for('delete_data')}}"">Delete Students, Quizzes</a>
+         <br>
+          <a href="{{url_for('view_anon', id=0)}}">View all grades for a quiz</a>
+          <br>
+           <a href="{{url_for('logout')}}">Logout</a>
+         
+    </div>
+</fieldset>
+</html>
