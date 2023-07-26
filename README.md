@@ -3,6 +3,8 @@
 This README purpose is to show the general layout of the structure within the repository. 
 * **Algorithms** - Some basic algorithms in Python 
   * Comparison of some simple sorting algorithms.
+* **Graduate work from the University of the Cumberlands**
+  * Data science coursework   
 * **Final Project Flask Example** -  My final Flask Project from SPS
   * A student course scheduler that llows students to add and delete file from their schedule.
 * **Flask Example** -  Some additional Flask examples  
