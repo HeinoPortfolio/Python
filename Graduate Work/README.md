@@ -1,4 +1,4 @@
-**Assignment**|**Concepts Used**
+**Directory**|**Course**
 :-----:|:-----:
-HomeWorkRepo-main/HomeWorkRepo-main | Homework for Fundamentals of Data Science course. 
+HomeWorkRepo-main/HomeWorkRepo-main |  Fundamentals of Data Science course. 
 
